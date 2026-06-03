@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nishant Pandey | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Background Glow */
+
+body::before{
+    content:'';
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#3b82f6;
+    filter:blur(220px);
+    top:-200px;
+    left:-150px;
+    opacity:0.35;
+    z-index:-1;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#8b5cf6;
+    filter:blur(220px);
+    bottom:-200px;
+    right:-150px;
+    opacity:0.35;
+    z-index:-1;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 10%;
+    backdrop-filter:blur(15px);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#60a5fa;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+/* Hero Section */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#60a5fa;
+}
+
+.hero p{
+    font-size:1.15rem;
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 32px;
+    background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+    border-radius:50px;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* Sections */
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:30px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.about p{
+    text-align:center;
+    color:#d1d5db;
+    max-width:850px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* Skills */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.skill{
+    cursor:pointer;
+}
+
+.skill h3{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.skill-desc{
+    display:none;
+    margin-top:15px;
+    color:#cbd5e1;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.skill.active .skill-desc{
+    display:block;
+}
+
+.skill.active{
+    border:1px solid #60a5fa;
+    transform:scale(1.03);
+}
+
+/* Contact */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:12px 0;
+    color:#d1d5db;
+}
+
+.contact a{
+    color:#60a5fa;
+    text-decoration:none;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:25px;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:#94a3b8;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:2.7rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Nishant<span>.</span></div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Hello, I'm <span>Nishant Pandey</span></h1>
+
+        <p>
+            B.Tech Computer Science Student passionate about
+            Java, Python, Web Development, Artificial Intelligence,
+            and Problem Solving.
+        </p>
+
+        <a href="#contact" class="btn">Contact Me</a>
+
+    </div>
+
+</section>
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="card about">
+
+        <p>
+            I am a Computer Science Engineering student pursuing my B.Tech
+            from AKTU. I am passionate about software development,
+            web technologies, artificial intelligence, and problem solving.
+            I enjoy learning new technologies and building projects that
+            create meaningful impact. My goal is to continuously improve
+            my technical skills and contribute to innovative solutions.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="skills">
+
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills-grid">
+
+        <div class="card skill" onclick="toggleSkill(this)">
+            <h3>Java</h3>
+            <p class="skill-desc">
+                Strong understanding of OOP concepts, Exception Handling,
+                Multithreading, Collections Framework, and Core Java.
+            </p>
+        </div>
+
+        <div class="card skill" onclick="toggleSkill(this)">
+            <h3>Python</h3>
+            <p class="skill-desc">
+                Skilled in Python programming, functions, file handling,
+                modules, and scripting for problem solving.
+            </p>
+        </div>
+
+        <div class="card skill" onclick="toggleSkill(this)">
+            <h3>HTML</h3>
+            <p class="skill-desc">
+                Experienced in creating semantic, structured,
+                and responsive web pages using HTML5.
+            </p>
+        </div>
+
+        <div class="card skill" onclick="toggleSkill(this)">
+            <h3>CSS</h3>
+            <p class="skill-desc">
+                Knowledge of Flexbox, Grid, Animations,
+                Responsive Design, and Modern UI styling.
+            </p>
+        </div>
+
+        <div class="card skill" onclick="toggleSkill(this)">
+            <h3>JavaScript</h3>
+            <p class="skill-desc">
+                Experience with DOM manipulation, event handling,
+                and interactive front-end development.
+            </p>
+        </div>
+
+        <div class="card skill" onclick="toggleSkill(this)">
+            <h3>DBMS</h3>
+            <p class="skill-desc">
+                Understanding of SQL queries, database design,
+                normalization, and relational databases.
+            </p>
+        </div>
+
+        <div class="card skill" onclick="toggleSkill(this)">
+            <h3>Operating Systems</h3>
+            <p class="skill-desc">
+                Familiar with process management, memory management,
+                scheduling algorithms, and deadlock handling.
+            </p>
+        </div>
+
+        <div class="card skill" onclick="toggleSkill(this)">
+            <h3>Computer Networks</h3>
+            <p class="skill-desc">
+                Knowledge of OSI model, TCP/IP protocols,
+                routing, switching, and networking fundamentals.
+            </p>
+        </div>
+
+        <div class="card skill" onclick="toggleSkill(this)">
+            <h3>Big Data</h3>
+            <p class="skill-desc">
+                Understanding of Hadoop, Spark, NoSQL databases,
+                and distributed computing concepts.
+            </p>
+        </div>
+
+        <div class="card skill" onclick="toggleSkill(this)">
+            <h3>Problem Solving</h3>
+            <p class="skill-desc">
+                Ability to analyze problems logically and develop
+                efficient and optimized solutions.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="card contact">
+
+        <p>📧 your-nishantpandey17092005@gmail.com</p>
+
+        <p>📱 +91 9118689766</p>
+
+        <p>
+            🔗
+            <a href="https://linkedin.com" target="_blank">
+                https://www.linkedin.com/in/nishant-pandey-412b08256/
+            </a>
+        </p>
+
+        <p>
+            💻
+            <a href="https://github.com" target="_blank">
+                GitHub Profile
+            </a>
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Nishant Pandey | Designed with ❤️
+</footer>
+
+<script>
+
+function toggleSkill(element){
+    element.classList.toggle("active");
+}
+
+</script>
+
+</body>
+</html>
